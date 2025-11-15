@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import IKImage from './IKImage';
+import { Link } from 'react-router';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -7,8 +8,8 @@ const Navbar = () => {
     <div className="w-full h-16 md:h-20 flex items-center justify-between">
       {/* Logo */}
       <div className=" text-2xl font-bold">
-        <a
-          href=""
+        <Link
+          to="/"
           className="flex items-center gap-4 focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
         >
           <IKImage
@@ -20,7 +21,7 @@ const Navbar = () => {
             height={32}
           />
           <h1>ApekBlog</h1>
-        </a>
+        </Link>
       </div>
       {/* Mobile Menu*/}
       <div className="md:hidden">
@@ -40,36 +41,36 @@ const Navbar = () => {
         >
           <ul className="flex flex-col justify-center items-center gap-8 xl:gap-12">
             <li className="">
-              <a
+              <Link
+                to="/"
                 className="font-medium text-xl focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-                href="/"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a
+              <Link
                 className="font-medium text-xl focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-                href="/"
+                to="/"
               >
                 Trending
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a
+              <Link
                 className="font-medium text-xl focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-                href="/"
+                to="/"
               >
                 Most Popular
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a
+              <Link
                 className="font-medium text-xl focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-                href="/"
+                to="/"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className="">
               <button className="font-medium text-xl py-2 px-4 rounded-3xl bg-blue-800 text-white hover:to-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-800">
@@ -83,36 +84,36 @@ const Navbar = () => {
       <div className="hidden md:flex">
         <ul className="flex items-center gap-8 xl:gap-12 font-medium text-lg">
           <li className="">
-            <a
+            <Link
               className="font-medium text-lg focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-              href="/"
+              to="/"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className="">
-            <a
+            <Link
               className="font-medium text-lg focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-              href="/"
+              to="/"
             >
               Trending
-            </a>
+            </Link>
           </li>
           <li className="">
-            <a
+            <Link
               className="font-medium text-lg focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-              href="/"
+              to="/"
             >
               Most Popular
-            </a>
+            </Link>
           </li>
           <li className="">
-            <a
+            <Link
               className="font-medium text-lg focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600"
-              href="/"
+              to="/"
             >
               About
-            </a>
+            </Link>
           </li>
           <li className="">
             <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white hover:to-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-800">

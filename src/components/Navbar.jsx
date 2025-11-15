@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import IKImage from './IKImage';
 import { Link } from 'react-router';
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from '@clerk/clerk-react';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -72,10 +78,17 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li className="">
-              <button className="font-medium text-xl py-2 px-4 rounded-3xl bg-blue-800 text-white hover:to-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-800">
-                Login 👋
-              </button>
+            <li>
+              <SignedOut>
+                <Link to="/login">
+                  <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white hover:to-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-800">
+                    Login 👋
+                  </button>
+                </Link>
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </li>
           </ul>
         </div>
@@ -115,10 +128,17 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li className="">
-            <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white hover:to-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-800">
-              Login 👋
-            </button>
+          <li>
+            <SignedOut>
+              <Link to="/login">
+                <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white hover:to-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-800">
+                  Login 👋
+                </button>
+              </Link>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </li>
         </ul>
       </div>

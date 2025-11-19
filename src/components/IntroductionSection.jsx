@@ -16,12 +16,13 @@ const IntroductionSection = () => {
         </p>
       </div>
       {/* animated button */}
-      <Link to="/write" className='relative hidden md:block'>
+      <Link to="/write" className='relative hidden md:block focus:outline-2 focus:outline-offset-2 focus:outline-dashed focus:outline-slate-600'>
         <svg
           viewBox="0 0 200 200"
           width="200"
           height="200"
           className="text-lg tracking-widest"
+          tabIndex="-1"
         >
           <defs>
             <path
@@ -42,7 +43,7 @@ const IntroductionSection = () => {
             </textPath>
           </text>
         </svg>
-        <button className="bg-blue-800 rounded-full flex items-center justify-center absolute top-2/4 left-2/4 -translate-x-1/2  -translate-y-1/2">
+        <button className="bg-blue-800 rounded-full flex items-center justify-center absolute top-2/4 left-2/4 -translate-x-1/2  -translate-y-1/2" tabIndex="-1">
           <svg
             width="100"
             height="100"

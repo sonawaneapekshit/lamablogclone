@@ -64,6 +64,7 @@ const IKImage = ({
             }
           : {}
       }
+      transformation={[{ width: width, height: height }]}
     />
   );
 };

@@ -13,3 +13,11 @@ body {
 .custom-container {
   
 }
+
+.quill .ql-toolbar.ql-snow {
+  border: none;
+}
+
+.quill .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border: none;
+}

@@ -6,7 +6,7 @@ const postSchema = new Schema(
   {
     user: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'User', // linkage of post to user who created the post
       required: true,
     },
     img: {
@@ -22,10 +22,10 @@ const postSchema = new Schema(
       unique: true,
     },
     desc: {
-      type: String,
+      type: String, // short description
     },
     content: {
-      type: String,
+      type: String, // content of the post
       required: true,
     },
     isFeatured: {
@@ -33,8 +33,8 @@ const postSchema = new Schema(
       default: false,
     },
     visit: {
-      type: number,
-      default: false,
+      type: Number,
+      default: 0,
     },
     savedPosts: {
       type: [String],

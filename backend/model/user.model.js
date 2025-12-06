@@ -18,11 +18,11 @@ const userSchema = new Schema(
       type: String,
     },
     savedPosts: {
-      type: [String],
+      type: [String],// string array with post ids
       default: [],
     }
   },
   { timestamps: true }
 );
-
+// collection name is User
 export default mongoose.model("User", userSchema)

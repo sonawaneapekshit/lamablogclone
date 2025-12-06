@@ -3,6 +3,11 @@ import connectDB from './lib/connectDB.js';
 import userRouter from './routes/user.route.js'
 import postRouter from './routes/post.route.js'
 import commentRouter from './routes/comment.route.js'
+import dotenv from "dotenv";
+
+// Load .env file BEFORE anything else
+dotenv.config();
+
 const app = express();
 
 // console.log(process.env.test);

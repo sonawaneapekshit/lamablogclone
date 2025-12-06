@@ -6,12 +6,12 @@ const commentSchema = new Schema(
   {
     user: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'User', // linkage of post comment to user who created the post
       required: true,
     },
     post: {
       type: Schema.Types.ObjectId,
-      ref: 'Post',
+      ref: 'Post ', // linkage of post comment to the post
       required: true,
     },
     desc: {
